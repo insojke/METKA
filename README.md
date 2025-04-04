@@ -22,7 +22,7 @@
 2. Navigate to the project directory:
 
     ```bash
-    cd metka
+    cd METKA
     ```
 
 3. Install the required dependencies:
@@ -67,7 +67,7 @@ python metka.py
 2. Откройте директорию:
 
     ```bash
-    cd metka
+    cd METKA
     ```
 
 3. Установите необходимые библиотеки:
