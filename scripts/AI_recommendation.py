@@ -61,9 +61,9 @@ def get_recommendation(file_path: str):
 
         answer = query_huggingface(prompt)
 
-        print("="*525)
+        print("="*50)
         print(answer)
-        print("="*525)
+        print("="*50)
 
     except Exception as e:
         print(f"Error | Ошибка: {e}")
