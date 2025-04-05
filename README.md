@@ -11,7 +11,63 @@
 - Analyze XML, HTML, and JSON files
 - Automatic report generation and recommendations for further OSINT investigation
 
-## Installation
+## Installation for Linux Terminal
+
+1. Install or update Python and pip3:
+
+    ```bash
+    sudo apt update
+    sudo apt install python3 python3-pip
+    ```
+
+2. Clone the repository:
+
+    ```bash
+    git clone https://github.com/insojke/METKA.git
+    ```
+
+3. Navigate to the project directory:
+
+    ```bash
+    cd METKA
+    ```
+
+4. Get an API token for Hugging Face (you can get it here: https://huggingface.co/settings/tokens)
+
+5. Create a token.env file:
+
+    ```bash
+    nano token.env
+    ```
+
+6. In the editor that opens, enter your token as follows:
+
+     ```bash
+    HF_TOKEN=YOUR_TOKEN_IS_HERE
+    ```
+
+7. Press "Ctrl+O", then "Enter", then "Ctrl+X" to save the changes in the file.
+
+8. Create a virtual environment and activate it:
+    ```bash
+    sudo apt install python3-venv -y
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+    
+9. Install the required dependencies:
+
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+
+10. Run the utility:
+
+    ```bash
+    python3 metka.py
+    ```
+
+## Installation for Windows PowerShell
 
 1. Clone the repository:
 
@@ -24,14 +80,38 @@
     ```bash
     cd METKA
     ```
-
+    
 3. Install the required dependencies:
-
+   
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Create a token.env file and paste the Hugging Face token there (you can get it here: https://huggingface.co/settings/tokens )
+4. Get an API token for Hugging Face (you can get it here: https://huggingface.co/settings/tokens)
+
+5. Create a token.env file:
+
+    ```bash
+    New-Item -Path . -Name "token.env" -ItemType "file"
+    ```
+
+6. Open the token.env file in a text editor:
+
+   ```bash
+    notepad token.env
+    ```
+
+7. In the editor that opens, enter your token as follows and save:
+
+   ```bash
+   HF_TOKEN=YOUR_TOKEN_IS_HERE
+   ```
+
+8. Run the utility:
+
+    ```bash
+    python metka.py
+    ```
 
 ## Usage
 
@@ -56,7 +136,64 @@ python metka.py
 - Анализ XML, HTML и JSON файлов
 - Автоматическое формирование отчетов и рекомендаций для дальнейшего OSINT-расследования
 
-## Установка
+## Установка для терминала Linux
+
+1. Установите или обновите Python и pip3:
+
+    ```bash
+    sudo apt update
+    sudo apt install python3 python3-pip
+    ```
+
+2. Клонируйте репозиторий:
+
+    ```bash
+    git clone https://github.com/insojke/METKA.git
+    ```
+
+3. Перейдите в каталог проекта:
+
+    ```bash
+    cd METKA
+    ```
+
+4. Получите API-токен для Hugging Face (Вы можете получить его здесь: https://huggingface.co/settings/tokens)
+
+5. Создайте файл token.env:
+
+    ```bash
+    nano token.env
+    ```
+
+6. В открывшемся редакторе введите Ваш токен следующим образом:
+
+    ```bash
+    HF_TOKEN=YOUR_TOKEN_IS_HERE
+    ```
+
+7. Нажмите "Ctrl+O", затем "Enter", затем "Ctrl+X", чтобы сохранить изменения в файле.
+
+8. Создайте виртуальную среду и активируйте её:
+
+    ```bash
+    sudo apt install python3-venv -y
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+9. Установите необходимые зависимости:
+
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+
+10. Запустите утилиту:
+
+    ```bash
+    python3 metka.py
+    ```
+
+## Установка для Windows PowerShell
 
 1. Клонируйте репозиторий:
 
@@ -64,19 +201,43 @@ python metka.py
     git clone https://github.com/insojke/METKA.git
     ```
 
-2. Откройте директорию:
+2. Перейдите в каталог проекта:
 
     ```bash
     cd METKA
     ```
-
-3. Установите необходимые библиотеки:
-
+    
+3. Установите необходимые зависимости:
+   
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Создайте файл token.env и вставьте туда токен Hugging Face (можно получить здесь: https://huggingface.co/settings/tokens)
+4. Получите API-токен для Hugging Face (Вы можете получить его здесь: https://huggingface.co/settings/tokens)
+
+5. Создайте файл token.env:
+
+    ```bash
+    New-Item -Path . -Name "token.env" -ItemType "file"
+    ```
+
+6. Откройте файл token.env в текстовом редакторе:
+
+   ```bash
+    notepad token.env
+    ```
+
+7. В открывшемся редакторе введите Ваш токен следующим образом и сохраните::
+
+   ```bash
+   HF_TOKEN=YOUR_TOKEN_IS_HERE
+   ```
+
+8. Запустите утилиту:
+
+    ```bash
+    python metka.py
+    ```
 
 ## Использование
 
