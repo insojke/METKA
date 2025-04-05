@@ -47,17 +47,16 @@ def get_recommendation(file_path: str):
             metadata_text = f.read()
 
         prompt = (
-            "Information for analyze:"
-            f"{metadata_text}"
-            "Now listen prompt:"
+            "Information for analysis:\n"
+            f"{metadata_text}\n"
+            "Now listen carefully:\n"
             "You are an expert in digital metadata analysis and OSINT investigations.\n"
-            "You will receive a metadata report from a digital file (image, document, media, etc).\n"
-            "Your task is to:\n"
-            "- Extract the following key elements: author's name, editing software, capture date, GPS coordinates, device model, user comments, and company (if present).\n"
-            "- If these elements are present, highlight them in your recommendation.\n"
-            "- If some of them are missing, examine the remaining metadata and try to infer or guess what might be important.\n"
-            "- Based on your analysis, give a clear and useful recommendation for further OSINT investigation.\n"
-            "- Format your answer like this:\n\n"
+            "Your task is to analyze the provided metadata and give a recommendation for further investigation.\n"
+            "- If key details like author's name, software, date, GPS coordinates, device model, or comments are present, highlight them in your recommendation.\n"
+            "- If some information is missing, suggest potential next steps based on available clues in the metadata.\n"
+            "- If important information is missing or masked, give advice on how to try and extract or infer it.\n"
+            "- Provide a clear and actionable recommendation for continuing the OSINT investigation.\n"
+            "- Format your answer as follows:\n\n"
             "Recommendation: <your detailed advice here>\n\n"
         )
 
