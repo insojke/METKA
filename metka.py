@@ -1,7 +1,5 @@
 from scripts.metadata_analyzer import analyze_metadata, create_report_file
 from scripts.AI_recommendation import get_recommendation
-from dotenv import load_dotenv
-import os
 
 
 def draw_metka():
