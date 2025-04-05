@@ -19,13 +19,6 @@ def draw_metka():
 
 def main():
     while True:
-        load_dotenv("token.env")
-        hf_token = os.getenv("HF_TOKEN")
-        if hf_token == "hf_your_token_here":
-            print(
-                "Please replace the token in token.env with your real HuggingFace token | Пожалуйста, замените токен в token.env на Ваш настоящий HuggingFace токен.")
-        else:
-            print(f"The work token has been successfully uploaded | Токен для работы успешно загружен")
         draw_metka()
         print("Select an action | Выберите действие:")
         print("[1] Analyze the file | Анализировать файл")
