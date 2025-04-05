@@ -55,7 +55,7 @@ def get_recommendation(file_path: str):
             "- If some of them are missing, examine the remaining metadata and try to infer or guess what might be important.\n"
             "- Based on your analysis, give a clear and useful recommendation for further OSINT investigation.\n"
             "- Format your answer like this:\n\n"
-            "Recommendation: <your detailed advice here>\n\n"
+            "Recommendation: ...\n\n"
             f"{metadata_text}"
         )
 
