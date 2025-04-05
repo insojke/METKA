@@ -47,6 +47,9 @@ def get_recommendation(file_path: str):
             metadata_text = f.read()
 
         prompt = (
+            "Information for analyze:"
+            f"{metadata_text}"
+            "Now listen prompt:"
             "You are an expert in digital metadata analysis and OSINT investigations.\n"
             "You will receive a metadata report from a digital file (image, document, media, etc).\n"
             "Your task is to:\n"
@@ -55,8 +58,7 @@ def get_recommendation(file_path: str):
             "- If some of them are missing, examine the remaining metadata and try to infer or guess what might be important.\n"
             "- Based on your analysis, give a clear and useful recommendation for further OSINT investigation.\n"
             "- Format your answer like this:\n\n"
-            "Recommendation: ...\n\n"
-            f"{metadata_text}"
+            "Recommendation: <your detailed advice here>\n\n"
         )
 
         answer = query_huggingface(prompt)
