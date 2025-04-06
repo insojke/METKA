@@ -57,9 +57,6 @@ def analyze_image_metadata(file_path):
             with open(file_path, 'rb') as f:
                 tags = exifread.process_file(f)
                 exif_tags = {tag: value for tag, value in tags.items() if not tag.startswith("JPEGThumbnail")}
-
-                latitude = tags.get('GPSLatitude', None)
-                longitude = tags.get('GPSLongitude', None)
                 author = tags.get('Image Artist', None)
 
                 if exif_tags:
@@ -68,13 +65,6 @@ def analyze_image_metadata(file_path):
                     for tag, value in exif_tags.items():
                         print(f"{tag}: {value}")
                         report_file.write(f"{tag}: {value}\n")
-
-                if latitude and longitude:
-                    report_file.write(f"Геолокация | Geolocation: {latitude}, {longitude}\n")
-                    print(f"Геолокация | Geolocation: {latitude}, {longitude}")
-                else:
-                    report_file.write("Geolocation was not found | Геолокация не найдена.\n")
-                    print("Geolocation was not found | Геолокация не найдена.")
 
                 if author:
                     report_file.write(f"Author | Автор: {author}\n")
