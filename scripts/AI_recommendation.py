@@ -8,7 +8,7 @@ load_dotenv("token.env")
 HF_TOKEN = os.getenv("HF_TOKEN")
 
 
-API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1"
+API_URL = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
 
